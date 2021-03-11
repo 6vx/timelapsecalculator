@@ -26,20 +26,20 @@
 <tlc>
     <div>
     <h3>Timelapse Calculator</h3>
-    <div class="flex-item">
-        <p>IN:<span>{captureDuration}</span>s</p>
-    </div>
-    <div class="flex-item">
-        <p>OUT:<span>{calculatedVideoLength}</span>s</p>
-    </div>
-    <div class="flex-item">
-        <p><span>{frameIntervalSelected}</span>SPF</p>   
-    </div>
-    <div class="flex-item">
-        <p><span>{frameRateSelected}</span>FPS</p>
-    </div>
-    
-    
+    <div class="flex-container">
+        <div class="flex-item">
+            <p>IN:<span>{captureDuration}</span>s</p>
+        </div>
+        <div class="flex-item">
+            <p>OUT:<span>{calculatedVideoLength}</span>s</p>
+        </div>
+        <div class="flex-item">
+            <p><span>{frameIntervalSelected}</span>SPF</p>   
+        </div>
+        <div class="flex-item">
+            <p><span>{frameRateSelected}</span>FPS</p>
+        </div>
+    </div>  
     <!-- <button on:click={click}>Recalculate</button> -->
     </div>
 </tlc>
@@ -50,18 +50,24 @@
         font-size: 1.4em;
         background-color: black;
         color: white;
-        display: flexbox;
+        
+    }
+    .flex-container {
+        display: flex;
         flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
         flex-wrap: wrap;
+
     }
     span {
         color: pink;
     }
     .flex-item {
-        flex: auto;
+        margin: 10px;
+        min-width: 125px;
         border: pink 2px dotted;
         border-radius: 25% 25% 25% 25%;
-        margin-top: 10px;
     }
     
 
