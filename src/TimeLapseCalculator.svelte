@@ -26,17 +26,17 @@
 <tlc>
     <div>
     <h3>Timelapse Calculator</h3>
-    <div class="in">
-        <p>INPUT</p>
-        <h1>{captureDuration}s</h1>
+    <div class="flex-item">
+        <p>IN:<span>{captureDuration}</span>s</p>
     </div>
-    <div class="out">
-        <p>OUTPUT</p>
-        <h1>{calculatedVideoLength}s </h1>
+    <div class="flex-item">
+        <p>OUT:<span>{calculatedVideoLength}</span>s</p>
     </div>
-    <div class="options">
-        <p>{frameRateSelected}fps</p>
-        <p>{frameIntervalSelected}spf</p>
+    <div class="flex-item">
+        <p><span>{frameIntervalSelected}</span>SPF</p>   
+    </div>
+    <div class="flex-item">
+        <p><span>{frameRateSelected}</span>FPS</p>
     </div>
     
     
@@ -47,27 +47,24 @@
 <style>
     tlc {
         font-family: monospace;
+        font-size: 1.4em;
         background-color: black;
         color: white;
+        display: flexbox;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
-    .in {
-        float: left;
+    span {
+        color: pink;
     }
-    .out {
-        float: right;
+    .flex-item {
+        flex: auto;
+        border: pink 2px dotted;
+        border-radius: 25% 25% 25% 25%;
+        margin-top: 10px;
     }
-    .options {
-        padding-top: 100px;
-    }
-    h3 {
-        text-decoration: underline;
-    }
-    p {
+    
 
-    }
-    button {
-        color: white;
-    }
 </style>
 
 
